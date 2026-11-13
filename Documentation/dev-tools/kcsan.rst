@@ -1,3 +1,4 @@
+
 .. SPDX-License-Identifier: GPL-2.0
 .. Copyright (C) 2019, Google LLC.
 
@@ -161,7 +162,7 @@ The file ``/sys/kernel/debug/kcsan`` provides the following interface:
 
 * Writing ``!some_func_name`` to ``/sys/kernel/debug/kcsan`` adds
   ``some_func_name`` to the report filter list, which (by default) blacklists
-  reporting data races where either one of the top stackframes are a function
+  reporting data races where either of the top stack frames is a function
   in the list.
 
 * Writing either ``blacklist`` or ``whitelist`` to ``/sys/kernel/debug/kcsan``
@@ -354,8 +355,8 @@ Key Properties
    this may result in missed data races (false negatives).
 
 6. **Analysis Accuracy:** For observed executions, due to using a sampling
-   strategy, the analysis is *unsound* (false negatives possible), but aims to
-   be complete (no false positives).
+   strategy, the analysis is *unsound* (false negatives possible), but aims
+   to be complete (no false positives).
 
 Alternatives Considered
 -----------------------
